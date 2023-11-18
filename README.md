@@ -1,7 +1,7 @@
 
 # Guidance for building distributed systems and Microservices in Go
 
-## Articles
+## Useful Articles
 * [Building Event-Driven Distributed Systems in Go with gRPC, NATS JetStream and CockroachDB](https://shijuvar.medium.com/building-event-driven-distributed-systems-in-go-with-grpc-nats-jetstream-and-cockroachdb-c4b899c8636d)
 
 ## Technologies Used: 
@@ -136,8 +136,3 @@ http_port: 8222
 6. The Query synchronising worker (querymodelworker) subscribes the event "ORDERS.created" that synchronise the query data model to provide state of the aggregates for query views.
 7. The review worker (reviewworker) subscribes the event "ORDERS.paymentdebited" and finally approves the order, and then create another event "ORDERS.approved" via Event Store API.
 8. A Saga coordinator manages the distributed transactions and makes void transactions on failures (to be implemented)
-
-
-## Training and Consulting in India
-As a Consulting Solutions Architect, I do provide [training and consulting on Go programming language and distributed systems architectures](https://github.com/shijuvar/shijuvar/blob/master/masterclass.md), in India.
-
